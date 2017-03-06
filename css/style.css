@@ -1,0 +1,36 @@
+	.square{
+		height: 70px;
+		width: 70px;
+		background-color: #ccc;
+		border: 3px solid #888;
+		font-size: xx-large;
+	}
+	.square:hover{
+		height: 70px;
+		width: 70px;
+		background-color: #554;
+		font-size: xx-large;
+		color: white;
+	}
+	.board-row{
+		clear: both;
+		content: "";
+		display: table;
+	}
+
+	.board{
+		margin: 0px auto;
+		width: 350px;
+		align-self: center;
+	}
+	#result{
+		min-height: 64px;
+		min-width: 274px;
+		background-color: #000;
+		border: 3px solid #888;
+		font-size: 45px;
+		color: #fff;
+		text-align: center;
+		display: inline-block;
+		float: right;
+	}

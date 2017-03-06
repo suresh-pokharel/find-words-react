@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Calculator using React JS By psuresh.com.np -->
+	<title>Fun Learning </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div id="container">
+
+</div>
+<br><br>
+<div>
+	<p><a target="_blank" href="https://github.com/suresh021/find-words-react.git">Find at GitHub</a></p>
+</div>
+
+	<script type="text/babel">
+		class Square extends React.Component{
+			render(){
+				//console.log(this.props.number)
+				return(
+					<button className='square' onClick={(e) =>this.clickHandler(e)}>
+						{this.props.number}
+					</button>
+				);
+			}
+
+			clickHandler(){
+				//if(this.props.number=='A'){
+					document.getElementById('result').innerHTML=this.props.fullword;
+					//console.log(this.props.fullword);
+				//}
+			}
+		}
+
+		class Result extends React.Component{
+			render(){
+				return(
+					<div id="result">
+						{this.props.fullword}
+					</div>
+				);
+			}
+
+		}
+
+
+		class Board extends React.Component{
+			renderSquare(i,m){
+				//const squares = this.props.squares;
+				return <Square number={i} fullword={m}/>;
+			}
+
+			renderResultBox(){
+				return <Result />;
+			}
+
+			render(){
+				return(
+				<div className="board">
+					<div className="board-row">
+					  {this.renderSquare('A','Apple')}
+					  {this.renderSquare('B','Ball')}
+					  {this.renderSquare('C','Cat')}
+					  {this.renderSquare('D','Dog')}
+					  {this.renderSquare('E','Elephant')}
+					</div>
+					<div className="board-row">
+					  {this.renderSquare('F','Fan')}
+					  {this.renderSquare('G','Gun')}
+					  {this.renderSquare('H','Hen')}
+					  {this.renderSquare('I','Ink')}
+					  {this.renderSquare('J','Jug')}
+					</div>
+					<div className="board-row">
+					  {this.renderSquare('K','Kite')}
+					  {this.renderSquare('L','Lion')}
+					  {this.renderSquare('M','Monkey')}
+					  {this.renderSquare('N','Nail')}
+					  {this.renderSquare('O','Orange')}
+					</div>
+					<div className="board-row">
+					  {this.renderSquare('P','Parrot')}
+					  {this.renderSquare('Q','Queen')}
+					  {this.renderSquare('R','Rat')}
+					  {this.renderSquare('S','Sun')}
+					  {this.renderSquare('T','Tree')}
+					</div>
+					<div className="board-row">
+					  {this.renderSquare('U','Umbrella')}
+					  {this.renderSquare('V','Van')}
+					  {this.renderSquare('W','Wind')}
+					  {this.renderSquare('X','X-Mas')}
+					  {this.renderSquare('Y','Yellow')}
+					</div>
+					<div className="board-row">
+					  {this.renderSquare('Z','Zebra')}
+					  {this.renderResultBox()}
+					</div>
+				</div>
+				);
+			}
+		}
+
+ReactDOM.render(
+  <Board />,
+  	document.getElementById('container')
+);
+</script>
+<script src="js/react.js"></script>
+<script src="js/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+<!-- <h3 style="float:right"><a target="_blank" href="https://github.com/suresh021/calculator-react/">See at GitHub</a></h3> -->
+</body>
+</html>
