@@ -2,4 +2,4 @@
 For basic understanding of react objects and passing props.
 
 ## DEMO
-http://psuresh.com.np/misc/find-words-react/
+http://projects.psuresh.com.np/find-words-react/
